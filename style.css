@@ -12,8 +12,8 @@ body{
 /* Navbar */
 .navbar {
   background: #FFFFFF;
-  padding: 20px 40px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 60px 10%;
+  
 }
 .navbar .container {
   display: flex;
@@ -26,8 +26,10 @@ body{
   color: #444;
   font-weight: bold;
 }
-.navbar .cart {
-  font-size: 24px;
+.navbar nav ul {
+   display: flex;
+    list-style: none;
+  
 }
 
 /* Hero Section */
