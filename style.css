@@ -167,105 +167,130 @@ body{
 
 /* Our Plants Section */
 /* Our Plants Section */
-.plants {
-  text-align: center;
-  padding: 80px 150px;
-  background-color: #ffff;
-}
+    .plants {
+      text-align: center;
+      padding: 80px 0;
+      background-color: #ffff;
+    }
 
-.plants h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
+    .plants h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-.plants h2 span {
-  color: #f15a24;
-}
+    .plants h2 span {
+      color: #f15a24;
+    }
 
-.plants p {
-  color: #666;
-  margin-bottom: 40px;
-  font-size: 16px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .plants p {
+      color: #666;
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-/* Grid for Desktop: 4 per row */
-.plant-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    /* Padding wrapper */
+    .plant-grid-wrapper {
+      padding: 0 150px;
+    }
 
-/* Card */
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
+    /* Grid */
+    .plant-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100p;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .card .price {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    .card button {
+      width: 100%;
+      padding: 10px 0;
+      background: #f15a24;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #47190b;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .plant-grid-wrapper {
+        padding: 0 20px;
+      }
+
+      .plant-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    /* Popup Modal */
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: none;
+  justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
+  z-index: 9999;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  max-height: 220px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  font-size: 16px;
-  color: #222;
-  margin-bottom: 6px;
-}
-
-.card .price {
+.popup-content {
+  background: #ffffff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-size: 18px;
   font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 15px;
-  color: #111;
+  color: green;
 }
-
-/* Button */
-.card button {
-  width: 100%;
-  padding: 10px 0;
-  background: #f15a24;
-  color: white;
-  font-weight: 600;
-  border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.card button:hover {
-  background: #c9481c;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .plants {
-    padding: 40px 20px;
-  }
-
-  .plant-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
-    gap: 20px;
-  }
-}
-
 
 /* Feature Section */
 /* Feature Section */
