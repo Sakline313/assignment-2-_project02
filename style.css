@@ -409,6 +409,13 @@ body{
   z-index: 10;
 }
 
+/* Responsive: Hide badge on mobile */
+@media (max-width: 768px) {
+  .feature-image .badge {
+    display: none;
+  }
+}
+
 
 /* Feature Section end */
 
